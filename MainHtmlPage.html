@@ -3,6 +3,12 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
+    <style type="text/css">
+        #txtOutput {
+            height: 205px;
+            width: 568px;
+        }
+    </style>
 </head>
 <body>
     <script src="wheyComputation.js"></script>
@@ -10,6 +16,10 @@
         Enter Price:
         <input id="inpPrice" type="text" /></p>
     <p>
-        <input id="Button1" type="button" value="Compute" onclick="GetFormattedComputation()" /></p>
+        &nbsp;<input id="Button1" type="button" value="Compute" onclick="GetFormattedComputation()" /></p>
+    <p>
+        Output:</p>
+    <p>
+        <textarea id="txtOutput" name="S1" readonly="readonly"></textarea></p>
 </body>
 </html>

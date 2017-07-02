@@ -38,7 +38,7 @@ function GetFormattedComputation()
     dataIn.caloriesPerServing = 2
 
     var dataOut = ComputeWhey(dataIn)
-    var NEWLINE = " <br> "
+    var NEWLINE = "\n"
     var strOut =
 "Grams of Protein Power Per Tub: " + dataOut.gramsProteinPerTub + NEWLINE +
 "Number of servings per tub: " + dataOut.numServingsPerTub + NEWLINE +
@@ -46,6 +46,8 @@ function GetFormattedComputation()
 "Price per gram of protein: " + dataOut.pricePerGramProtein + NEWLINE +
 "Price per Calorie serving: " + dataOut.pricePerCalorie + NEWLINE +
 "Total Calories Per Tub: " + dataOut.totalCaloriesTub;
-    document.write(strOut);
+    //document.write(strOut);
+
+    document.getElementById("txtOutput").value = strOut;
 
 }
