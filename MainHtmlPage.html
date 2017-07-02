@@ -13,13 +13,31 @@
 <body>
     <script src="wheyComputation.js"></script>
     <p>
-        Enter Price:
-        <input id="inpPrice" type="text" /></p>
+        Enter Protein Powder in Lbs (whole tub):
+        <input id="txtbxPpWeight" type="text" />
+    </p>
     <p>
-        &nbsp;<input id="Button1" type="button" value="Compute" onclick="GetFormattedComputation()" /></p>
+        Enter Price (any currency is OK): 
+        <input id="txtbxPrice" type="text" />
+    </p>
+    <p>
+        Enter Grams of Protein Powder Per Serving:
+        <input id="txtbxPowderPerServing" type="text" />
+    </p>
+    <p>
+        Enter Grams of Protein Per Serving:
+        <input id="txtbxProteinPerServing" type="text" />
+        </p>
+    <p>
+        Enter Calories Per Serving:
+        <input id="txtbxCalPerServing" type="text" />
+    </p>
+  
+    <p>
+        &nbsp;<input id="btnCompute" type="button" value="Compute" onclick="GetFormattedComputation()" /></p>
     <p>
         Output:</p>
     <p>
-        <textarea id="txtOutput" name="S1" readonly="readonly"></textarea></p>
+        <textarea id="txtOutput" readonly="readonly"></textarea></p>
 </body>
 </html>
