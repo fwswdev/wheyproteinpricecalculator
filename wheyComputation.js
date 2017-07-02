@@ -1,6 +1,13 @@
 ﻿function getValFromTextBox(txtBoxName) {
     var s = document.getElementById(txtBoxName);
-    return s.value;
+    var val = s.value;
+    if(isNaN(val)) return NaN
+    return parseFloat(val);
+}
+
+function onLoad()
+{
+    document.addEventListener("contextmenu", function(e){e.preventDefault();},false);
 }
 
 function ComputeWhey(dataIn) {
@@ -44,16 +51,23 @@ function GetFormattedComputation() {
     var b = (dataIn.weightOfTubInLbs && dataIn.gramspowderperserving &&
         dataIn.price && dataIn.gramsproteinperserving && dataIn.caloriesPerServing);
 
-    var dataOut = ComputeWhey(dataIn);
-    var NEWLINE = "\n";
-    var strOut =
-"Grams of Protein Power Per Tub: " + dataOut.gramsProteinPerTub + NEWLINE +
-"Number of servings per tub: " + dataOut.numServingsPerTub + NEWLINE +
-"Price per scoop:" + dataOut.pricePerScoop + NEWLINE +
-"Price per gram of protein: " + dataOut.pricePerGramProtein + NEWLINE +
-"Price per Calorie serving: " + dataOut.pricePerCalorie + NEWLINE +
-"Total Calories Per Tub: " + dataOut.totalCaloriesTub;
-
-    document.getElementById("txtOutput").value = strOut;
+    console.log("b is: " + b);
+    if (!isNaN(b)) {
+        var dataOut = ComputeWhey(dataIn);
+        var NEWLINE = "\n";
+        var strOut =
+    "Grams of Protein Power Per Tub: " + dataOut.gramsProteinPerTub + NEWLINE +
+    "Number of servings per tub: " + dataOut.numServingsPerTub + NEWLINE +
+    "Price per scoop:" + dataOut.pricePerScoop + NEWLINE +
+    "Price per gram of protein: " + dataOut.pricePerGramProtein + NEWLINE +
+    "Price per Calorie serving: " + dataOut.pricePerCalorie + NEWLINE +
+    "Total Calories Per Tub: " + dataOut.totalCaloriesTub;
+        document.getElementById("txtOutput").value = strOut;
+    }
+    else
+    {
+        alert("Please make sure they are valid numbers and no fields are left blank.")
+        document.getElementById("txtOutput").value = '';
+    }
 
 }

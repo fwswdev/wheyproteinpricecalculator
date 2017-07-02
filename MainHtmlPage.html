@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Whey Protein Price Calculator</title>
 	<meta charset="utf-8" />
     <style type="text/css">
         #txtOutput {
@@ -10,8 +10,12 @@
         }
     </style>
 </head>
-<body>
+<body onload="onLoad()">
     <script src="wheyComputation.js"></script>
+    <p align="center" style="border: thin dashed #000080; padding: 1px; color: #CC3300;">
+        <strong style="font-size: xx-large">WHEY PROTEIN PRICE CALCULATOR</strong></p>
+    <p>
+        <em>I created this site for us to be able to find the best bang-for-the-buck Whey protein in the market. For sure, all of us don&#39;t want to spend on overpriced whey proteins. :)</em></p>
     <p>
         Enter Protein Powder in Lbs (whole tub):
         <input id="txtbxPpWeight" type="text" />
@@ -36,8 +40,12 @@
     <p>
         &nbsp;<input id="btnCompute" type="button" value="Compute" onclick="GetFormattedComputation()" /></p>
     <p>
-        Output:</p>
+        <strong>Output:</strong></p>
     <p>
         <textarea id="txtOutput" readonly="readonly"></textarea></p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <em>- Jeff</em></p>
 </body>
 </html>
