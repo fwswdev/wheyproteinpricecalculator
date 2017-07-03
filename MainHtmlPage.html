@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Whey Protein Price Calculator</title>
+	<meta charset="utf-8" />
+    <style type="text/css">
+        #txtOutput {
+            height: 205px;
+            width: 568px;
+        }
+    </style>
+</head>
+<body onload="onLoad()">
+    <script src="wheyComputation.js"></script>
+    <p align="center" style="border: thin dashed #000080; padding: 1px; color: #CC3300;">
+        <strong style="font-size: xx-large">WHEY PROTEIN PRICE CALCULATOR</strong></p>
+    <p>
+        <em>I created this site for us to be able to find the best bang-for-the-buck Whey protein in the market. For sure, all of us don&#39;t want to spend on overpriced whey proteins. :) Check the nutrition fact label then enter it here. For more information see the visual guide <a href="wheyinfo.png">here</a>.</em></p>
+    <p>
+        Enter Protein Powder in Lbs (whole tub):
+        <input id="txtbxPpWeight" type="text" value="5" />
+    </p>
+    <p>
+        Enter Price (any currency is OK): 
+        <input id="txtbxPrice" type="text" value="2600" />
+    </p>
+    <p>
+        Enter Grams of Protein Powder Per Serving:
+        <input id="txtbxPowderPerServing" type="text" value="30" />
+    </p>
+    <p>
+        Enter Grams of Protein Per Serving:
+        <input id="txtbxProteinPerServing" type="text" value="24" />
+        </p>
+    <p>
+        Enter Calories Per Serving:
+        <input id="txtbxCalPerServing" type="text" value="100" />
+    </p>
+  
+    <p>
+        &nbsp;<input id="btnCompute" type="button" value="Compute" onclick="GetFormattedComputation()" /></p>
+    <p>
+        <strong>Output:</strong></p>
+    <p>
+        <textarea id="txtOutput" readonly="readonly"></textarea></p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <em>- Jeff</em></p>
+</body>
+</html>
